@@ -1,7 +1,19 @@
 # ViewPagerInfiniteLoop
 ViewPager的无限循环滚动，滑动流畅不卡顿
 
-实现原理：
+
+## 先来学习一下ViewPager实现原理
+ViewPager是一个页面容器，只是每一个页面都是整一屏幕，
+*流程：ViewPager控件每一次翻动都会去Adpater中去取一个View，然后缓存一个改混动方向的View。PagerAdapter的作用是让开发者自己实现取数据，将其填充自定义的单页VIew布局中。然后实现PagerAdapter的一些生命周期方法，返回View给ViewPager显示。简单的说Adapter就是一个数据容器，开发者自定义ViewPager的获取逻辑。<br>
+
+ViewPager总是持有三个View实例（默认三个开发者可以修改）setOffscreenPageLimit(预加载个数),除了第一次，每次调用PagerAdapter的instantiateItem方法获取View实例的时候，传入的position都是当前页的下一页坐标，是为缓存一页，然后销毁掉上一页的上一页。<br>
+过程：初始化0，1项；翻至1项，生成2项；翻至2项；销毁0项生成3项；<br>
+如图：<br>
+
+![](https://github.com/jiashuaishuai/ViewPagerInfiniteLoop/blob/master/8E51D341-7388-43FB-A259-76667C5EDB79.png)
+
+
+## ViewPager无线滚动原理实现原理：
 
 ![](https://github.com/jiashuaishuai/ViewPagerInfiniteLoop/blob/master/7D4A80B1-2DE9-4E48-B6E0-CDB2DD415C14.png)
 
@@ -38,7 +50,7 @@ ViewPager的无限循环滚动，滑动流畅不卡顿
         }  
     }
    
-# ViewPager.PageTransformer ViewPager切换动画实现解析
+## ViewPager.PageTransformer ViewPager切换动画实现解析
    实现方法：
    
    my_viewpager.setPageTransformer(true,new DepthPagerTransformer());
@@ -57,7 +69,7 @@ ViewPager的无限循环滚动，滑动流畅不卡顿
    ![](https://github.com/jiashuaishuai/ViewPagerInfiniteLoop/blob/master/48CB865D-3212-4064-8604-74BB65CBFB3E.png)
    
    
-## 向右滑动数据变化情况：<br>
+### 向右滑动数据变化情况：<br>
    
  后  >>>>>>>>>>  0.0018115942<br>
  前  <<<<<<<<<  -0.9981884<br>
@@ -80,7 +92,7 @@ ViewPager的无限循环滚动，滑动流畅不卡顿
  Current--------   0.0<br>
  后  >>>>>>>>>>  1.0<br>
        
-## 向左滑动数据变化情况：<br>
+### 向左滑动数据变化情况：<br>
 
  前  <<<<<<<<<  -0.010869565<br>
  后  >>>>>>>>>>  0.98913044<br>
