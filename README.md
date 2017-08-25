@@ -6,7 +6,7 @@ ViewPager的无限循环滚动，滑动流畅不卡顿
 
 拓展知识：
 
-`@Override  
+`
         public void onPageScrollStateChanged(int state) {  
             switch (state) {  
             case ViewPager.SCROLL_STATE_DRAGGING://1 dragging（拖动），理解为：只要触发拖动/滑动事件时，则 state = ViewPager.SCROLL_STATE_DRAGGING  
@@ -24,7 +24,6 @@ ViewPager的无限循环滚动，滑动流畅不卡顿
                     Log.e("在末页向左滑", "state:"+state+"---------->misScrolled:"+misScrolled+"---------->现在的页码索引:"+mViewPager.getCurrentItem());  
                     Toast.makeText(mContext, "已经是最后一页", 2).show();  
                 }  
-                  
                 if (mViewPager.getCurrentItem() == 0 && !misScrolled) {//如果当前页是第一页，并且滑动，则触发finish()  
                     /*此处可写一些逻辑，如finish() 或 startActivity() 
                     finish();*/  
@@ -37,4 +36,5 @@ ViewPager的无限循环滚动，滑动流畅不卡顿
             }  
         }  
   
-    }`
+    }
+    `
