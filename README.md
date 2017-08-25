@@ -13,7 +13,7 @@ ViewPager是一个页面容器，只是每一个页面都是整一屏幕，<br>
 ![](https://github.com/jiashuaishuai/ViewPagerInfiniteLoop/blob/master/8E51D341-7388-43FB-A259-76667C5EDB79.png)
 
 
-## ViewPager无线滚动原理实现原理：
+## ViewPager无限滚动原理实现原理：
 
 ![](https://github.com/jiashuaishuai/ViewPagerInfiniteLoop/blob/master/7D4A80B1-2DE9-4E48-B6E0-CDB2DD415C14.png)
 
@@ -32,8 +32,8 @@ ViewPager是一个页面容器，只是每一个页面都是整一屏幕，<br>
         }
     }
     
-
-拓展知识：
+    
+### 拓展知识：
 
 
         public void onPageScrollStateChanged(int state) {  
