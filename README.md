@@ -4,9 +4,9 @@ ViewPager的无限循环滚动，滑动流畅不卡顿
 
 ## 先来学习一下ViewPager实现原理
 ViewPager是一个页面容器，只是每一个页面都是整一屏幕，<br>
-**流程：ViewPager控件每一次翻动都会去Adpater中去取一个View，然后缓存一个改混动方向的View。PagerAdapter的作用是让开发者自己实现取数据，将其填充自定义的单页VIew布局中。然后实现PagerAdapter的一些生命周期方法，返回View给ViewPager显示。简单的说Adapter就是一个数据容器，开发者自定义ViewPager的获取逻辑。<br>
+1. 流程：ViewPager控件每一次翻动都会去Adpater中去取一个View，然后缓存一个改混动方向的View。PagerAdapter的作用是让开发者自己实现取数据，将其填充自定义的单页VIew布局中。然后实现PagerAdapter的一些生命周期方法，返回View给ViewPager显示。简单的说Adapter就是一个数据容器，开发者自定义ViewPager的获取逻辑。<br>
 
-**ViewPager总是持有三个View实例（默认三个开发者可以修改）setOffscreenPageLimit(预加载个数),除了第一次，每次调用PagerAdapter的instantiateItem方法获取View实例的时候，传入的position都是当前页的下一页坐标，是为缓存一页，然后销毁掉上一页的上一页。<br>
+2. ViewPager总是持有三个View实例（默认三个开发者可以修改）setOffscreenPageLimit(预加载个数),除了第一次，每次调用PagerAdapter的instantiateItem方法获取View实例的时候，传入的position都是当前页的下一页坐标，是为缓存一页，然后销毁掉上一页的上一页。<br>
 过程：初始化0，1项；翻至1项，生成2项；翻至2项；销毁0项生成3项；<br>
 如图：<br>
 
