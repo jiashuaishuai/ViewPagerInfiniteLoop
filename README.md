@@ -43,12 +43,12 @@ ViewPager的无限循环滚动，滑动流畅不卡顿
    
    my_viewpager.setPageTransformer(true,new DepthPagerTransformer());
    
-   PageTransformer接口中实现public void transformPage(View page, float position)方法，
-   page： 顾名思义这里不多做解释；
-   position：该值有三个零界点-1，0，1
-         * 0  代表当前屏幕显示的view的坐标
-         * 1  代表当前view的下一个view所在的坐标
-         * -1 代表当前view的前一个view所在的坐标
+   PageTransformer接口中实现public void transformPage(View page, float position)方法，<br>
+   page： 顾名思义这里不多做解释；<br>
+   position：该值有三个零界点-1，0，1<br>
+         * 0  代表当前屏幕显示的view的坐标<br>
+         * 1  代表当前view的下一个view所在的坐标<br>
+         * -1 代表当前view的前一个view所在的坐标<br>
          
    ![](https://github.com/jiashuaishuai/ViewPagerInfiniteLoop/blob/master/A403EF71-AA89-4F39-8554-701D4AFCDDEB.png)
    
