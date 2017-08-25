@@ -132,6 +132,6 @@ ViewPager是一个页面容器，只是每一个页面都是整一屏幕，<br>
  前  <<<<<<<<<  -1.0<br>
  
  # 摘录：
- http://blog.csdn.net/ddtou/article/details/21244879
- http://www.cnblogs.com/lang-yu/p/6082791.html
+ http://blog.csdn.net/ddtou/article/details/21244879<br>
+ http://www.cnblogs.com/lang-yu/p/6082791.html<br>
  http://blog.csdn.net/oweixiao123/article/details/23459041
