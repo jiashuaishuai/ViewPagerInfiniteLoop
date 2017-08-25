@@ -7,6 +7,7 @@ ViewPager的无限循环滚动，滑动流畅不卡顿
 拓展知识：
 
 `
+
         public void onPageScrollStateChanged(int state) {  
             switch (state) {  
             case ViewPager.SCROLL_STATE_DRAGGING://1 dragging（拖动），理解为：只要触发拖动/滑动事件时，则 state = ViewPager.SCROLL_STATE_DRAGGING  
@@ -35,6 +36,6 @@ ViewPager的无限循环滚动，滑动流畅不卡顿
                 break;  
             }  
         }  
-  
     }
+    
     `
