@@ -2,11 +2,11 @@
 ViewPager的无限循环滚动，滑动流畅不卡顿
 
 实现原理：
-![](https://github.com/jiashuaishuai/ViewPagerInfiniteLoop/blob/master/7D4A80B1-2DE9-4E48-B6E0-CDB2DD415C14.png);
+![](https://github.com/jiashuaishuai/ViewPagerInfiniteLoop/blob/master/7D4A80B1-2DE9-4E48-B6E0-CDB2DD415C14.png)
 
 拓展知识：
 
-` @Override  
+`@Override  
         public void onPageScrollStateChanged(int state) {  
             switch (state) {  
             case ViewPager.SCROLL_STATE_DRAGGING://1 dragging（拖动），理解为：只要触发拖动/滑动事件时，则 state = ViewPager.SCROLL_STATE_DRAGGING  
@@ -37,4 +37,4 @@ ViewPager的无限循环滚动，滑动流畅不卡顿
             }  
         }  
   
-    }  `
+    }`
