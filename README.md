@@ -58,53 +58,47 @@ ViewPager的无限循环滚动，滑动流畅不卡顿
    
    
    ##向右滑动数据变化情况：<br>
- 后  >>>>>>>>>>  0.0018115942
- 前  <<<<<<<<<  -0.9981884
- 后  >>>>>>>>>>  0.008152174
- 前  <<<<<<<<<  -0.9918478
- 后  >>>>>>>>>>  0.014492754
- 前  <<<<<<<<<  -0.98550725
- 后  >>>>>>>>>>  0.019927537
- 前  <<<<<<<<<  -0.98007244
- 后  >>>>>>>>>>  0.02807971
-..........
- 前  <<<<<<<<<  -0.0027173914
- 后  >>>>>>>>>>  0.9981884
- 前  <<<<<<<<<  -0.0018115942
- 后  >>>>>>>>>>  0.9990942
- 前  <<<<<<<<<  -9.057971E-4
- 后  >>>>>>>>>>  1.0
- Current--------   0.0
- 前  <<<<<<<<<  -1.0
- Current--------   0.0
- 后  >>>>>>>>>>  1.0
+   
+ 后  >>>>>>>>>>  0.0018115942<br>
+ 前  <<<<<<<<<  -0.9981884<br>
+ 后  >>>>>>>>>>  0.008152174<br>
+ 前  <<<<<<<<<  -0.9918478<br>
+ 后  >>>>>>>>>>  0.014492754<br>
+ 前  <<<<<<<<<  -0.98550725<br>
+ 后  >>>>>>>>>>  0.019927537<br>
+ 前  <<<<<<<<<  -0.98007244<br>
+ 后  >>>>>>>>>>  0.02807971<br>
+..........<br>
+ 前  <<<<<<<<<  -0.0027173914<br>
+ 后  >>>>>>>>>>  0.9981884<br>
+ 前  <<<<<<<<<  -0.0018115942<br>
+ 后  >>>>>>>>>>  0.9990942<br>
+ 前  <<<<<<<<<  -9.057971E-4<br>
+ 后  >>>>>>>>>>  1.0<br>
+ Current--------   0.0<br>
+ 前  <<<<<<<<<  -1.0<br>
+ Current--------   0.0<br>
+ 后  >>>>>>>>>>  1.0<br>
        
 ##向左滑动数据变化情况：<br>
 
-08-25 14:20:35.861 1157-1157/com.example.jiashuai.viewpagerinfiniteloop E/tag: 前  <<<<<<<<<  -0.010869565
-08-25 14:20:35.861 1157-1157/com.example.jiashuai.viewpagerinfiniteloop E/tag: 后  >>>>>>>>>>  0.98913044
-08-25 14:20:35.877 1157-1157/com.example.jiashuai.viewpagerinfiniteloop E/tag: 前  <<<<<<<<<  -0.026268115
-08-25 14:20:35.877 1157-1157/com.example.jiashuai.viewpagerinfiniteloop E/tag: 后  >>>>>>>>>>  0.9737319
-08-25 14:20:35.894 1157-1157/com.example.jiashuai.viewpagerinfiniteloop E/tag: 前  <<<<<<<<<  -0.04076087
-08-25 14:20:35.894 1157-1157/com.example.jiashuai.viewpagerinfiniteloop E/tag: 后  >>>>>>>>>>  0.9592391
-08-25 14:20:35.911 1157-1157/com.example.jiashuai.viewpagerinfiniteloop E/tag: 前  <<<<<<<<<  -0.054347824
-08-25 14:20:35.911 1157-1157/com.example.jiashuai.viewpagerinfiniteloop E/tag: 后  >>>>>>>>>>  0.9456522
-08-25 14:20:35.932 1157-1157/com.example.jiashuai.viewpagerinfiniteloop E/tag: 前  <<<<<<<<<  -0.07155797
-08-25 14:20:35.933 1157-1157/com.example.jiashuai.viewpagerinfiniteloop E/tag: 后  >>>>>>>>>>  0.928442
-................
-08-25 14:20:36.534 1157-1157/com.example.jiashuai.viewpagerinfiniteloop E/tag: 后  >>>>>>>>>>  0.007246377
-08-25 14:20:36.550 1157-1157/com.example.jiashuai.viewpagerinfiniteloop E/tag: 前  <<<<<<<<<  -0.9945652
-08-25 14:20:36.551 1157-1157/com.example.jiashuai.viewpagerinfiniteloop E/tag: 后  >>>>>>>>>>  0.0054347827
-08-25 14:20:36.567 1157-1157/com.example.jiashuai.viewpagerinfiniteloop E/tag: 前  <<<<<<<<<  -0.9963768
-08-25 14:20:36.567 1157-1157/com.example.jiashuai.viewpagerinfiniteloop E/tag: 后  >>>>>>>>>>  0.0036231885
-08-25 14:20:36.584 1157-1157/com.example.jiashuai.viewpagerinfiniteloop E/tag: 前  <<<<<<<<<  -0.9972826
-08-25 14:20:36.584 1157-1157/com.example.jiashuai.viewpagerinfiniteloop E/tag: 后  >>>>>>>>>>  0.0027173914
-08-25 14:20:36.600 1157-1157/com.example.jiashuai.viewpagerinfiniteloop E/tag: 前  <<<<<<<<<  -0.9981884
-08-25 14:20:36.600 1157-1157/com.example.jiashuai.viewpagerinfiniteloop E/tag: 后  >>>>>>>>>>  0.0018115942
-08-25 14:20:36.617 1157-1157/com.example.jiashuai.viewpagerinfiniteloop E/tag: 前  <<<<<<<<<  -0.9990942
-08-25 14:20:36.617 1157-1157/com.example.jiashuai.viewpagerinfiniteloop E/tag: 后  >>>>>>>>>>  9.057971E-4
-08-25 14:20:36.650 1157-1157/com.example.jiashuai.viewpagerinfiniteloop E/tag: 前  <<<<<<<<<  -1.0
-08-25 14:20:36.651 1157-1157/com.example.jiashuai.viewpagerinfiniteloop E/tag: Current--------   0.0
-08-25 14:20:36.835 1157-1157/com.example.jiashuai.viewpagerinfiniteloop E/tag: 后  >>>>>>>>>>  1.0
-08-25 14:20:36.835 1157-1157/com.example.jiashuai.viewpagerinfiniteloop E/tag: Current--------   0.0
-08-25 14:20:36.835 1157-1157/com.example.jiashuai.viewpagerinfiniteloop E/tag: 前  <<<<<<<<<  -1.0
+ 前  <<<<<<<<<  -0.010869565<br>
+ 后  >>>>>>>>>>  0.98913044<br>
+ 前  <<<<<<<<<  -0.026268115<br>
+ 后  >>>>>>>>>>  0.9737319<br>
+ 前  <<<<<<<<<  -0.04076087<br>
+ 后  >>>>>>>>>>  0.9592391<br>
+ 前  <<<<<<<<<  -0.054347824<br>
+ 后  >>>>>>>>>>  0.9456522<br>
+................<br>
+ 前  <<<<<<<<<  -0.9972826<br>
+ 后  >>>>>>>>>>  0.0027173914<br>
+ 前  <<<<<<<<<  -0.9981884<br>
+ 后  >>>>>>>>>>  0.0018115942<br>
+ 前  <<<<<<<<<  -0.9990942<br>
+ 后  >>>>>>>>>>  9.057971E-4<br>
+ 前  <<<<<<<<<  -1.0<br>
+ Current--------   0.0<br>
+ 后  >>>>>>>>>>  1.0<br>
+ Current--------   0.0<br>
+ 前  <<<<<<<<<  -1.0<br>
