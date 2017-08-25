@@ -38,4 +38,21 @@ ViewPager的无限循环滚动，滑动流畅不卡顿
         }  
     }
     
+   #ViewPager.PageTransformer ViewPager切换动画实现解析
+   实现方法：
    
+   my_viewpager.setPageTransformer(true,new DepthPagerTransformer());
+   
+   PageTransformer接口中实现public void transformPage(View page, float position)方法，
+   page： 顾名思义这里不多做解释；
+   position：该值有三个零界点-1，0，1
+         * 0  代表当前屏幕显示的view的坐标
+         * 1  代表当前view的下一个view所在的坐标
+         * -1 代表当前view的前一个view所在的坐标
+         
+   ![](https://github.com/jiashuaishuai/ViewPagerInfiniteLoop/blob/master/A403EF71-AA89-4F39-8554-701D4AFCDDEB.png)
+   
+   当ViewPager左右滑动时变化情况：
+   
+   ![](https://github.com/jiashuaishuai/ViewPagerInfiniteLoop/blob/master/48CB865D-3212-4064-8604-74BB65CBFB3E.png)
+       
