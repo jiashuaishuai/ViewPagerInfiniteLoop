@@ -25,6 +25,7 @@ public class MainActivity extends AppCompatActivity implements ViewPager.OnPageC
         setContentView(R.layout.activity_main);
         my_viewpager = (ViewPager) findViewById(R.id.my_viewpager);
         my_viewpager.setAdapter(new ViewPagerAdapter());
+        my_viewpager.setPageTransformer(true,new DepthPagerTransformer());
         my_viewpager.setCurrentItem(1);
         my_viewpager.addOnPageChangeListener(this);
 
@@ -52,7 +53,6 @@ public class MainActivity extends AppCompatActivity implements ViewPager.OnPageC
                 position = 1;
                 my_viewpager.setCurrentItem(position, false);
             }
-            Log.e("Tag", "pps" + position);
         }
     }
 
