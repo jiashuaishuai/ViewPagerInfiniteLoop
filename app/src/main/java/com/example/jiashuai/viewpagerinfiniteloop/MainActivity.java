@@ -1,20 +1,23 @@
 package com.example.jiashuai.viewpagerinfiniteloop;
 
 import android.content.Context;
+import android.os.Bundle;
 import android.support.v4.view.PagerAdapter;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
-import android.os.Bundle;
-import android.util.Log;
 import android.util.SparseArray;
+import android.view.MotionEvent;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
+import android.widget.RelativeLayout;
 
-public class MainActivity extends AppCompatActivity implements ViewPager.OnPageChangeListener{
+public class MainActivity extends AppCompatActivity implements ViewPager.OnPageChangeListener {
 
     private ViewPager my_viewpager;
-    private int[] imgList = {R.drawable.heada, R.drawable.headb, R.drawable.headc};
+    private LinearLayout my_pager_lly;
+    private int[] imgList = {R.drawable.icon2, R.drawable.icon3, R.drawable.icon4, R.drawable.icon5};
     public Context mContext;
 
 
@@ -24,10 +27,22 @@ public class MainActivity extends AppCompatActivity implements ViewPager.OnPageC
         mContext = this;
         setContentView(R.layout.activity_main);
         my_viewpager = (ViewPager) findViewById(R.id.my_viewpager);
+        my_pager_lly = (LinearLayout) findViewById(R.id.my_pager_lly);
         my_viewpager.setAdapter(new ViewPagerAdapter());
-        my_viewpager.setPageTransformer(true,new DepthPagerTransformer());
+//        my_viewpager.setPageTransformer(true,new DepthPagerTransformer());//滑动动画，这里改的透明度
         my_viewpager.setCurrentItem(1);
+        my_viewpager.setOffscreenPageLimit(3);
+        my_viewpager.setPageMargin(30);
         my_viewpager.addOnPageChangeListener(this);
+        /**
+         * 滑动传递
+         */
+        my_pager_lly.setOnTouchListener(new View.OnTouchListener() {
+            @Override
+            public boolean onTouch(View v, MotionEvent event) {
+                return my_viewpager.dispatchTouchEvent(event);
+            }
+        });
 
     }
 
@@ -44,7 +59,7 @@ public class MainActivity extends AppCompatActivity implements ViewPager.OnPageC
 
     @Override
     public void onPageScrollStateChanged(int state) {
-        if (state == ViewPager.SCROLL_STATE_IDLE||state == ViewPager.SCROLL_STATE_DRAGGING) {//滚动结束和滚动开始
+        if (state == ViewPager.SCROLL_STATE_IDLE || state == ViewPager.SCROLL_STATE_DRAGGING) {//滚动结束和滚动开始
             int position = my_viewpager.getCurrentItem();
             if (position < 1) {//当前pager小于1则偷梁换柱跳转到倒数第二个位置，imgList.length
                 position = imgList.length;
@@ -92,16 +107,22 @@ public class MainActivity extends AppCompatActivity implements ViewPager.OnPageC
         public Object instantiateItem(ViewGroup container, int position) {
             if (imageViews.get(position) == null) {
                 ImageView img = new ImageView(mContext);
+                img.setLayoutParams(new ViewGroup.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, 100));
                 int c = position - 1;//当前viewIndex-1
                 if (position == 0)//第一个view对应的是数据列表最后一个src
+                {
                     c = imgList.length - 1;
+                }
                 if (position - 1 == imgList.length)//最后一个view里装数据列表第一个src
+                {
                     c = 0;
-                img.setImageResource(imgList[c]);
+                }
+                img.setBackgroundResource(imgList[c]);
                 imageViews.put(position, img);
             }
             container.addView(imageViews.get(position));
             return imageViews.get(position);
         }
+
     }
 }

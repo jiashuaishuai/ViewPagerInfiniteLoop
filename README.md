@@ -50,6 +50,32 @@ ViewPager是一个页面容器，只是每一个页面都是整一屏幕，<br>
         }  
     }
    
+## 一屏显示多个子页面
+   第一种：重写PagerAdapter getPageWidth(int position) 方法
+   
+   第二种： android:clipChildren=”false”
+   1. 配置ViewPager和其父布局的 android:clipChildren=”false”。
+   (android:clipChildren表示是否限制子View在其范围内，默认为true. 代码设置setClipChildren(false)) 
+   因为如果clipChildren属性设置为true,就表明我们要将children给clip掉，就是说对于子元素来说，超出当前view的部分都会被切掉，那我们在这里把它设置成false，就表明超出view的部分，不要切掉，依然显示。
+   2. 设置幕后item的缓存数目。如果一屏展示的pager数目多的话就需要设置此项。
+   
+     mViewPager.setOffscreenPageLimit(3);  // 具体缓存页数自己订吧
+  
+  3. 设置页与页之间的间距
+  
+    mViewPager.setPageMargin(int marginPixls);  // setPageMargin表示设置page之间的间距
+    
+   4. 设置滑动，点击事件（这里暂不说）
+   如果只是简单的实现滑动，可以用设置viewPager父控件的onTouch监听到ViewPager的监听上。
+   
+    // 将父类的touch事件分发至viewPgaer，否则只能滑动中间的一个view对象  
+    findViewById(R.id.relativeLayout).setOnTouchListener(new View.OnTouchListener() {
+        @Override
+        public boolean onTouch(View v, MotionEvent event) {
+            return mViewPager.dispatchTouchEvent(event);
+        }
+    });
+   
 ## ViewPager.PageTransformer ViewPager切换动画实现解析
    实现方法：
    
