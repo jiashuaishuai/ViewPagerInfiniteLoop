@@ -13,11 +13,27 @@ ViewPager是一个页面容器，只是每一个页面都是整一屏幕，<br>
 ![](https://github.com/jiashuaishuai/ViewPagerInfiniteLoop/blob/master/8E51D341-7388-43FB-A259-76667C5EDB79.png)
 
 
-## ViewPager无线滚动原理实现原理：
+## ViewPager无限滚动原理实现原理：
 
 ![](https://github.com/jiashuaishuai/ViewPagerInfiniteLoop/blob/master/7D4A80B1-2DE9-4E48-B6E0-CDB2DD415C14.png)
 
-拓展知识：
+
+
+    public void onPageScrollStateChanged(int state) {
+        if (state == ViewPager.SCROLL_STATE_IDLE||state == ViewPager.SCROLL_STATE_DRAGGING) {//滚动结束和滚动开始
+            int position = my_viewpager.getCurrentItem();
+            if (position < 1) {//当前pager小于1则偷梁换柱跳转到倒数第二个位置，imgList.length
+                position = imgList.length;
+                my_viewpager.setCurrentItem(position, false);
+            } else if (position > imgList.length) {//当前pager大于数据数组长度时则，跳转到第二个位置， 1
+                position = 1;
+                my_viewpager.setCurrentItem(position, false);
+            }
+        }
+    }
+    
+    
+### 拓展知识：
 
 
         public void onPageScrollStateChanged(int state) {  
@@ -140,3 +156,8 @@ ViewPager是一个页面容器，只是每一个页面都是整一屏幕，<br>
  后  >>>>>>>>>>  1.0<br>
  Current--------   0.0<br>
  前  <<<<<<<<<  -1.0<br>
+ 
+ # 摘录：
+ http://blog.csdn.net/ddtou/article/details/21244879<br>
+ http://www.cnblogs.com/lang-yu/p/6082791.html<br>
+ http://blog.csdn.net/oweixiao123/article/details/23459041
